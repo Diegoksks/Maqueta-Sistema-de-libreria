@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar Productos al Proveedor</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="solicitar-productos-page">
+
+<header>
+  <h1>Solicitar Productos al Proveedor</h1>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a href="gestion_bodega.html">Gestión de Bodegas</a></li>
+    <li><a href="movimientos.html">Movimientos de Productos</a></li>
+  </ul>
+</nav>
+
+<div class="container">
+  <h3>Formulario para Solicitar Productos</h3>
+  
+  <form id="solicitarForm">
+    <label for="producto">Producto:</label>
+    <input type="text" id="producto" name="producto" required>
+    
+    <label for="cantidad">Cantidad:</label>
+    <input type="number" id="cantidad" name="cantidad" required min="1">
+    
+    <label for="proveedor">Proveedor:</label>
+    <select id="proveedor" name="proveedor" required>
+      <option value="">Seleccionar Proveedor</option>
+      <option value="Proveedor A">Proveedor A</option>
+      <option value="Proveedor B">Proveedor B</option>
+    </select>
+    
+    <button type="submit" class="button">Enviar Solicitud</button>
+  </form>
+</div>
+
+</body>
+</html>

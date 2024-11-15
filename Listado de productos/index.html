@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión o Registrarse</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+<div class="full-page-container">
+  <div class="login-container">
+    <div class="form-container" id="loginContainer">
+      <h2>Iniciar Sesión</h2>
+      <form id="loginForm" action="Home.html">
+        <label for="loginUsername">Usuario:</label>
+        <input type="text" id="loginUsername" required>
+        
+        <label for="loginPassword">Contraseña:</label>
+        <input type="password" id="loginPassword" required>
+        
+        <button type="submit" class="button">Ingresar</button>
+      </form>
+      <p class="switch-form">¿No tienes una cuenta? <a href="#" onclick="showRegisterForm()">Regístrate</a></p>
+    </div>
+
+    <div class="form-container" id="registerContainer" style="display: none;">
+      <h2>Registrarse</h2>
+      <form id="registerForm">
+        <label for="registerUsername">Usuario:</label>
+        <input type="text" id="registerUsername" required>
+        
+        <label for="registerPassword">Contraseña:</label>
+        <input type="password" id="registerPassword" required>
+        
+        <label for="confirmPassword">Confirmar Contraseña:</label>
+        <input type="password" id="confirmPassword" required>
+
+        <label for="role">Rol:</label>
+        <select id="role" required>
+          <option value="">Selecciona un rol</option>
+          <option value="Administrador">Administrador</option>
+          <option value="Asistente de Bodega">Asistente de Bodega</option>
+        </select>
+
+        <button type="submit" class="button">Registrarse</button>
+      </form>
+      <p class="switch-form">¿Ya tienes una cuenta? <a href="#" onclick="showLoginForm()">Iniciar Sesión</a></p>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

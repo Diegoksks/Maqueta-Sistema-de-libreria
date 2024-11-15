@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportes - Sistema de Gestión de Bodegas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="reportes-header">
+    <h1>Reportes del Sistema de Gestión de Bodegas</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="gestion_bodega.html">Gestión de Bodegas</a></li>
+      <li><a href="movimientos.html">Movimientos de Productos</a></li>
+      <li><a href="Home.html">Inicio</a></li>
+    </ul>
+  </nav>
+
+  <div class="container reportes-container">
+    <h3>Seleccione el reporte que desea ver</h3>
+
+    <!-- Filtro de Reportes -->
+    <div class="reportes-filtro">
+      <h4>Filtrar Reportes</h4>
+      <form id="filtro-form">
+        <div class="form-group">
+          <label for="reporte-tipo">Tipo de Reporte:</label>
+          <select id="reporte-tipo" name="reporte-tipo">
+            <option value="productos-bodega">Productos por Bodega</option>
+            <option value="productos-tipo">Productos por Tipo</option>
+            <option value="productos-editorial">Productos por Editorial</option>
+            <option value="movimientos">Movimientos de Productos</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="fecha">Fecha:</label>
+          <input type="date" id="fecha" name="fecha">
+        </div>
+
+        <div class="form-group">
+          <label for="bodega">Bodega:</label>
+          <select id="bodega" name="bodega">
+            <option value="">Seleccione Bodega</option>
+            <option value="bodega1">Bodega 1</option>
+            <option value="bodega2">Bodega 2</option>
+            <option value="bodega3">Bodega 3</option>
+          </select>
+        </div>
+
+        <button type="submit" class="button">Generar Reporte</button>
+      </form>
+    </div>
+
+    <!-- Opciones de Reportes -->
+    <div class="reportes-options">
+      <!-- Reporte de productos por bodega -->
+      <div class="report-option">
+        <h4>Productos por Bodega</h4>
+        <p>Consulta la cantidad de productos disponibles en cada bodega.</p>
+        <a href="#" class="button">Ver Reporte</a>
+      </div>
+
+      <!-- Reporte de productos por tipo -->
+      <div class="report-option">
+        <h4>Productos por Tipo</h4>
+        <p>Consulta los productos organizados por tipo o categoría.</p>
+        <a href="#" class="button">Ver Reporte</a>
+      </div>
+
+      <!-- Reporte de productos por editorial -->
+      <div class="report-option">
+        <h4>Productos por Editorial</h4>
+        <p>Consulta los productos filtrados por una editorial específica.</p>
+        <a href="#" class="button">Ver Reporte</a>
+      </div>
+
+      <!-- Reporte de movimientos de productos -->
+      <div class="report-option">
+        <h4>Movimientos de Productos</h4>
+        <p>Consulta el historial de movimientos de productos entre bodegas.</p>
+        <a href="#" class="button">Ver Reporte</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

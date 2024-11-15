@@ -1,0 +1,398 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Permite que el contenido ocupe el ancho completo */
+    justify-content: flex-start;
+}
+
+/* Encabezado */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #0056b3;
+    width: 80%;  /* Limitar el ancho del nav al 80% del contorno */
+    max-width: 1200px;  /* Máximo ancho de 1200px */
+    margin: 0 auto;  /* Centrar el nav horizontalmente */
+    padding: 10px 0;  /* Ajuste de padding para mejor apariencia */
+    border-radius: 8px;  /* Redondear los bordes del nav */
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;  /* Distribuye los elementos de manera equitativa */
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1em;
+    padding: 15px 20px;
+    display: block;
+    transition: background-color 0.3s;
+    border-radius: 4px;  /* Redondear los bordes de los enlaces */
+  }
+  
+  nav ul li a:hover {
+    background-color: #004494;
+    border-radius: 4px;
+  }
+  
+
+/* Contenedor principal */
+.container {
+    background-color: white;
+    width: 90%;  /* Ajusta el contenedor para ocupar el 90% del ancho */
+    max-width: 1200px;  /* Máximo ancho de 1200px */
+    padding: 40px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: auto; /* Alinea el contenedor a la izquierda */
+    margin-right: auto; /* Centra el contenedor, pero sin forzarlo */
+}
+
+.container h3 {
+    color: #333;
+    font-size: 1.2em;
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin-bottom: 10px;
+    }
+    
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+/* Estilos específicos para la página de inicio de sesión */
+.login-page .login-container {
+    background-color: #fff;
+    width: 350px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.login-page h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los formularios */
+.login-page .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-page form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.login-page label {
+    text-align: left;
+    color: #555;
+}
+
+.login-page input, 
+.login-page select {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.login-page .button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.login-page .button:hover {
+    background-color: #0056b3;
+}
+
+/* Enlace para cambiar de formulario */
+.login-page .switch-form {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.login-page .switch-form a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.login-page .switch-form a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la página de gestión de bodegas */
+.gestion-bodega-page header {
+    background-color: #28a745; /* Color verde para la gestión de bodegas */
+}
+
+.gestion-bodega-page .container {
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.gestion-bodega-page h3 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+.gestion-bodega-page .gestion-options {
+    margin-top: 20px;
+}
+
+.gestion-bodega-page .option {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gestion-bodega-page .option h4 {
+    color: #28a745;
+    font-size: 1.2em;
+}
+
+.gestion-bodega-page .option p {
+    color: #555;
+}
+
+.gestion-bodega-page .option a.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.gestion-bodega-page .option a.button:hover {
+    background-color: #0056b3;
+}
+
+/* Página de solicitud de productos */
+.solicitar-productos-page header {
+    background-color: #28a745; /* Color verde para la solicitud de productos */
+}
+
+.solicitar-productos-page .container {
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.solicitar-productos-page h3 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+.solicitar-productos-page form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.solicitar-productos-page input, 
+.solicitar-productos-page select {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.solicitar-productos-page .button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.solicitar-productos-page .button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos para el filtro */
+.reportes-filtro {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.reportes-filtro h4 {
+    color: #28a745;
+    font-size: 1.2em;
+}
+
+.reportes-filtro .form-group {
+    margin-bottom: 15px;
+}
+
+.reportes-filtro label {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.reportes-filtro select,
+.reportes-filtro input[type="date"] {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.reportes-filtro button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.reportes-filtro button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para las opciones de reporte */
+.reportes-options {
+    margin-top: 20px;
+}
+
+.report-option {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.report-option h4 {
+    color: #28a745;
+    font-size: 1.2em;
+}
+
+.report-option p {
+    color: #555;
+}
+
+.report-option a.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.report-option a.button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para el botón de Cerrar sesión */
+#logoutButton {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  #logoutButton:hover {
+    background-color: #c82333;
+  }
+  
+/* Centrar el formulario de inicio de sesión o registro */
+.full-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    width: 350px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+}
